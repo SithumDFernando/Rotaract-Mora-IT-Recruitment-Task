@@ -27,7 +27,7 @@ export async function POST(request: NextRequest) {
     }
     
     return NextResponse.json({ success: true }, { status: 201 });
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: 'Invalid request' }, { status: 400 });
   }
 }
@@ -49,7 +49,7 @@ export async function PUT(request: NextRequest) {
     }
     
     return NextResponse.json({ success: true }, { status: 200 });
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: 'Invalid request' }, { status: 400 });
   }
 }

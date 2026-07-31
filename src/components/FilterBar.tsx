@@ -42,7 +42,7 @@ export function FilterBar({
         <Select 
           className="w-full sm:w-[180px] bg-slate-50 border-transparent dark:bg-slate-950 focus:bg-white dark:focus:bg-slate-900 text-slate-900 dark:text-slate-50"
           value={categoryFilter}
-          onChange={(e) => onCategoryChange(e.target.value as any)}
+          onChange={(e) => onCategoryChange(e.target.value as Category | 'All')}
         >
           <option value="All">All Categories</option>
           {CATEGORIES.map(cat => (

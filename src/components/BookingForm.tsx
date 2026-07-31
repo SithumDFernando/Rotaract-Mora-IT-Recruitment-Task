@@ -1,7 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { Booking, BookingInsert, CATEGORIES, Category } from '@/lib/types';
+import { Booking, CATEGORIES, Category } from '@/lib/types';
 import { createBooking, updateBooking } from '@/actions/bookings';
 import { isSlotBooked } from '@/lib/utils';
 import { TIME_SLOTS } from '@/lib/constants';
@@ -35,22 +35,9 @@ export function BookingForm({
   const [isLoading, setIsLoading] = React.useState(false);
 
   // Form state
-  const [name, setName] = React.useState('');
-  const [category, setCategory] = React.useState<Category>(CATEGORIES[0]);
-  const [note, setNote] = React.useState('');
-
-  // Sync with editing state
-  React.useEffect(() => {
-    if (editingBooking) {
-      setName(editingBooking.name);
-      setCategory(editingBooking.category);
-      setNote(editingBooking.note || '');
-    } else {
-      setName('');
-      setCategory(CATEGORIES[0]);
-      setNote('');
-    }
-  }, [editingBooking]);
+  const [name, setName] = React.useState(editingBooking?.name || '');
+  const [category, setCategory] = React.useState<Category>(editingBooking?.category || CATEGORIES[0]);
+  const [note, setNote] = React.useState(editingBooking?.note || '');
 
   // Derived state: available slots for the selected date
   const availableSlots = React.useMemo(() => {
@@ -105,7 +92,7 @@ export function BookingForm({
           toast(result.error || 'Failed to create booking', 'error');
         }
       }
-    } catch (err) {
+    } catch {
       toast('An unexpected error occurred.', 'error');
     } finally {
       setIsLoading(false);
@@ -181,7 +168,7 @@ export function BookingForm({
             <Select
               id="category"
               value={category}
-              onChange={(e) => setCategory(e.target.value as any)}
+              onChange={(e) => setCategory(e.target.value as Category)}
             >
               {CATEGORIES.map((cat) => (
                 <option key={cat} value={cat}>{cat}</option>

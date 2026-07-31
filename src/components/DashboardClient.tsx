@@ -78,6 +78,7 @@ export function DashboardClient({ initialBookings }: { initialBookings: Booking[
             onDateSelect={handleDateSelect} 
           />
           <BookingForm
+            key={editingBooking?.id || 'new'}
             bookings={initialBookings}
             selectedDate={selectedDate}
             selectedTime={selectedTime}

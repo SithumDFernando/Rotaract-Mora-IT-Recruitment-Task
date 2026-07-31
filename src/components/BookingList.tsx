@@ -6,7 +6,7 @@ import { formatDate, formatTime } from '@/lib/utils';
 import { Badge } from './ui/Badge';
 import { Button } from './ui/Button';
 import { Modal } from './ui/Modal';
-import { Card, CardHeader, CardTitle, CardContent } from './ui/Card';
+import { Card, CardContent } from './ui/Card';
 import { CalendarDays, Clock, Edit2, Trash2 } from 'lucide-react';
 import { deleteBooking } from '@/actions/bookings';
 import { useToast } from './ui/Toast';
@@ -32,7 +32,7 @@ export function BookingList({ bookings, onEdit }: BookingListProps) {
       } else {
         toast(result.error || 'Failed to delete booking', 'error');
       }
-    } catch (err) {
+    } catch {
       toast('An unexpected error occurred.', 'error');
     } finally {
       setIsDeleting(false);
