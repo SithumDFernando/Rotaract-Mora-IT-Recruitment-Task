@@ -33,14 +33,14 @@ export function FilterBar({
         <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
         <Input 
           placeholder="Search bookings by name or note..." 
-          className="pl-9 bg-slate-50 border-transparent dark:bg-slate-950 focus:bg-white"
+          className="pl-9 bg-slate-50 border-transparent dark:bg-slate-950 focus:bg-white dark:focus:bg-slate-900 text-slate-900 dark:text-slate-50"
           value={searchTerm}
           onChange={(e) => onSearchChange(e.target.value)}
         />
       </div>
       <div className="flex w-full sm:w-auto items-center gap-2">
         <Select 
-          className="w-full sm:w-[180px] bg-slate-50 border-transparent dark:bg-slate-950 focus:bg-white"
+          className="w-full sm:w-[180px] bg-slate-50 border-transparent dark:bg-slate-950 focus:bg-white dark:focus:bg-slate-900 text-slate-900 dark:text-slate-50"
           value={categoryFilter}
           onChange={(e) => onCategoryChange(e.target.value as any)}
         >
