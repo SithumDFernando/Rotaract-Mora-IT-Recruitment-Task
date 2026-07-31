@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Time Slot Booking Dashboard
 
-## Getting Started
+A premium, responsive, and robust time slot booking application built with Next.js 15, Tailwind CSS v4, and Supabase.
 
-First, run the development server:
+## ✨ Features
+
+- **Modern UI/UX**: Premium aesthetic with micro-animations, glassmorphism, and responsive layouts.
+- **Robust Booking System**: 30-minute time slots (8:00 AM - 10:00 PM) with 3 layers of overlap prevention (Client UI, Server Actions, PostgreSQL Exclusion Constraints).
+- **CRUD Functionality**: Create, Read, Update, and Delete bookings with ease.
+- **Interactive Calendar**: Custom month-view calendar with indicator dots for days that have bookings.
+- **Dynamic Filtering**: Client-side searching by name/note and filtering by category.
+- **Optimistic/Fast Updates**: Built with Next.js Server Actions for seamless client-server communication.
+
+## 🛠 Tech Stack
+
+- **Framework**: [Next.js 15](https://nextjs.org/) (App Router, Server Actions)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Database**: [Supabase](https://supabase.com/) (PostgreSQL)
+- **Types**: [TypeScript](https://www.typescriptlang.org/)
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/SithumDFernando/Rotaract-Mora-IT-Recruitment-Task.git
+cd "Recruitment Task"
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Setup Supabase
+
+1. Create a new project in [Supabase](https://supabase.com/).
+2. Go to the SQL Editor and run the migration and seed scripts located in `supabase/migrations/001_create_bookings_table.sql` and `supabase/seed.sql`.
+3. _(Optional)_ To bypass Row Level Security for testing, run: `ALTER TABLE bookings DISABLE ROW LEVEL SECURITY;`
+
+### 4. Configure Environment Variables
+
+Create a `.env.local` file in the root directory and add your Supabase keys:
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=https://[YOUR_PROJECT_ID].supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=[YOUR_ANON_KEY]
+```
+
+### 5. Run the Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📦 Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project is optimized for deployment on [Vercel](https://vercel.com).
 
-## Learn More
+1. Push your code to GitHub.
+2. Import the project into Vercel.
+3. Add the `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` to the Vercel Environment Variables.
+4. Deploy!
 
-To learn more about Next.js, take a look at the following resources:
+## 🧪 CI/CD
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project includes a GitHub Actions workflow (`.github/workflows/ci.yml`) that automatically installs dependencies, lints the code, and builds the Next.js application on every push to the `main` branch.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+made by Sithum Dulain Fernando

@@ -3,6 +3,7 @@ import { DashboardClient } from '@/components/DashboardClient';
 import { ToastProvider } from '@/components/ui/Toast';
 import { CalendarIcon } from 'lucide-react';
 
+export const dynamic = 'force-dynamic';
 export const revalidate = 0; // Disable static rendering for this page
 
 export default async function Home() {

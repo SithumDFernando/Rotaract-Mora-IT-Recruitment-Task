@@ -27,7 +27,7 @@
 - [x] Implement `loading.tsx`
 
 # Phase 5 — Polish, CI/CD & Deployment
-- [ ] Add micro-animations and accessibility features
-- [ ] Create CI Pipeline (`.github/workflows/ci.yml`)
-- [ ] Verify deployment process
-- [ ] Write `README.md`
+- [x] Add micro-animations and accessibility features
+- [x] Create CI Pipeline (`.github/workflows/ci.yml`)
+- [x] Verify deployment process
+- [x] Write `README.md`

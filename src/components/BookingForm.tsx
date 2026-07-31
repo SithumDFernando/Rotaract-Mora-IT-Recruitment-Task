@@ -36,7 +36,7 @@ export function BookingForm({
 
   // Form state
   const [name, setName] = React.useState('');
-  const [category, setCategory] = React.useState(CATEGORIES[0]);
+  const [category, setCategory] = React.useState<Category>(CATEGORIES[0]);
   const [note, setNote] = React.useState('');
 
   // Sync with editing state
