@@ -8,11 +8,11 @@
 - [x] Create Shared Types & Constants (`src/lib/types.ts`, `src/lib/constants.ts`, `src/lib/utils.ts`)
 
 # Phase 2 — Core Booking Logic (Server Actions)
-- [ ] Implement `getBookings` server action
-- [ ] Implement `createBooking` server action (with overlap prevention)
-- [ ] Implement `updateBooking` server action
-- [ ] Implement `deleteBooking` server action
-- [ ] Create API Route as fallback (`src/app/api/bookings/route.ts`)
+- [x] Implement `getBookings` server action
+- [x] Implement `createBooking` server action (with overlap prevention)
+- [x] Implement `updateBooking` server action
+- [x] Implement `deleteBooking` server action
+- [x] Create API Route as fallback (`src/app/api/bookings/route.ts`)
 
 # Phase 3 — UI Components
 - [ ] Create Reusable UI Primitives (`Button.tsx`, `Badge.tsx`, `Card.tsx`, `Input.tsx`, `Select.tsx`, `Toast.tsx`, `Modal.tsx`)
