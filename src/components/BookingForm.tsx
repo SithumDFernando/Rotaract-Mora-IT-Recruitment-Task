@@ -1,7 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { Booking, BookingInsert, CATEGORIES } from '@/lib/types';
+import { Booking, BookingInsert, CATEGORIES, Category } from '@/lib/types';
 import { createBooking, updateBooking } from '@/actions/bookings';
 import { isSlotBooked } from '@/lib/utils';
 import { TIME_SLOTS } from '@/lib/constants';

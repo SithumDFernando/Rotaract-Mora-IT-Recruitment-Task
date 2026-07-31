@@ -19,5 +19,5 @@ export interface Booking {
   created_at: string;
 }
 
-export type BookingInsert = Omit<Booking, 'id' | 'created_at'>;
+export type BookingInsert = Omit<Booking, 'id' | 'created_at' | 'end_time'> & { end_time?: string };
 export type BookingUpdate = Partial<BookingInsert>;
