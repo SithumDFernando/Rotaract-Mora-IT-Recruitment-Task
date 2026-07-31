@@ -15,12 +15,12 @@
 - [x] Create API Route as fallback (`src/app/api/bookings/route.ts`)
 
 # Phase 3 — UI Components
-- [ ] Create Reusable UI Primitives (`Button.tsx`, `Badge.tsx`, `Card.tsx`, `Input.tsx`, `Select.tsx`, `Toast.tsx`, `Modal.tsx`)
-- [ ] Implement `BookingForm.tsx` (Create & Edit modes)
-- [ ] Implement `TimeSlotGrid.tsx`
-- [ ] Implement `BookingList.tsx`
-- [ ] Implement `CalendarView.tsx`
-- [ ] Implement `FilterBar.tsx`
+- [x] Create Reusable UI Primitives (`Button.tsx`, `Badge.tsx`, `Card.tsx`, `Input.tsx`, `Select.tsx`, `Toast.tsx`, `Modal.tsx`)
+- [x] Implement `BookingForm.tsx` (Create & Edit modes)
+- [x] Implement `TimeSlotGrid.tsx`
+- [x] Implement `BookingList.tsx`
+- [x] Implement `CalendarView.tsx`
+- [x] Implement `FilterBar.tsx`
 
 # Phase 4 — Main Page Assembly & Loading States
 - [ ] Assemble `page.tsx`
