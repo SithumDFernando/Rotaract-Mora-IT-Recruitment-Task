@@ -23,8 +23,8 @@
 - [x] Implement `FilterBar.tsx`
 
 # Phase 4 — Main Page Assembly & Loading States
-- [ ] Assemble `page.tsx`
-- [ ] Implement `loading.tsx`
+- [x] Assemble `page.tsx`
+- [x] Implement `loading.tsx`
 
 # Phase 5 — Polish, CI/CD & Deployment
 - [ ] Add micro-animations and accessibility features
